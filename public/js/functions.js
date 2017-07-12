@@ -342,10 +342,24 @@ function answerBack(data) {
 	if(typeof(data.output.error) == "string"){
 		html_message+= 'Hubo un error. Por favor intenta más tarde.';
 		//html_message+= '<p>'+data.output.error+'</p>';
-	}else{
+	}
+
+	//Para el caso de mapa (data12.json)
+	else if(data.output.text[0] === "<p><div class='map' style='height:250px;width:200px'></div></p>"){
+		console.log("Estas pidiendo el mapa");
+		//Si ya existe un map, le cambio la clase a todos por oldMap y disparo el nuevo
+		if($(".map").length > 0){
+			console.log("Old maps found");
+			$(".map").attr("class","oldMap");
+		}
+		//Recordar que data.output.text es un array con primer elemento el texto
+		html_message+="<p>"+data.output.text[0]+"</p>";
+	}
+	else{
         //alert(data.output.text);
 
-        for(var i in data.output.text){
+
+    for(var i in data.output.text){
 			if(data.output.text[i].substring(0, 2) == '<p'){
 				html_message+=data.output.text[i];
 			}else{
@@ -572,9 +586,6 @@ function sendMessage(text) {
 
     if (text == "ver diariero cerca" || text == "Ver diariero cerca" ){
         PROXY_URL="json/data12.json";
-
-
-
     };
 
 

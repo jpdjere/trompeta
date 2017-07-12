@@ -230,6 +230,20 @@
 
 		<script type="text/javascript">
 
+						$('.mic').on('mousedown mouseup', function mouseState(e) {
+								if (e.type == "mousedown") {
+										//code triggers on hold
+										console.log("Si");
+										startConverting();
+								}
+								if (e.type == "mouseup") {
+										//code triggers on release
+										speechRecognizer.stop();
+
+
+								}
+						});
+
             var r = document.getElementById('chatMessage');
             var speechRecognizer = "";
             function startConverting () {
@@ -254,8 +268,20 @@
                             }
                         }
                         //r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
-						$("input[name=mensajeAEnviar]").val(finalTranscripts + interimTranscripts);
+												$("input[name=mensajeAEnviar]").val(finalTranscripts + interimTranscripts);
                     };
+
+										speechRecognizer.onend = function(event){
+											if ($chatMessage.value) {
+												speechRecognizer.stop();
+												writeAndSendMessage($chatMessage.value);
+												console.log("AHora si");
+												$chatMessage.value = '';
+												console.log("On end")
+
+											}
+										};
+
                     speechRecognizer.onerror = function (event) {
                     };
                 }else{
@@ -265,7 +291,7 @@
 
             var map;
             function initMap() {
-                map = new google.maps.Map(document.getElementById('map'), {
+                map = new google.maps.Map(document.getElementsByClassName("map")[0], {
                     center: {lat: -34.397, lng: 150.644},
                     zoom: 8
                 });

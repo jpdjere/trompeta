@@ -12,7 +12,7 @@
   "output": {
     "log_messages": [],
     "text": [
-      "<p><div id='map'></div></p>"
+      "<p><div class='map' style='height:250px;width:200px'></div></p>"
     ],
     "nodes_visited": [
       "node_1_1474565951597"
@@ -53,4 +53,3 @@
     "has_suggestions_topics": false
   }
 }
-
