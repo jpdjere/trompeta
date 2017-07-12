@@ -1,0 +1,1846 @@
+
+/* FONTS */
+/* font-family:'Roboto',Helvetica,Arial,sans-serif; */
+
+/* ---- */
+
+/* @group WATSON CONTAINER
+--------------------------------------------------------------- */
+
+body {
+	background-image: url(../img/pantalla.png);
+	background-position: center top;
+	background-size: 100% auto;
+}
+
+/* watson container */
+#watson_container {
+	position: fixed;
+	bottom: 0px;
+	right: 20px;
+	z-index: 9999;
+	font-family:'Roboto',Helvetica,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+#watson_container p{
+	font-family:'Roboto',Helvetica,Arial,sans-serif !important;
+}
+
+
+/* watson container - clear */
+#watson_container .clear,
+#watson_container.clearfix {
+	clear: both;
+}
+
+/* watson container - table box */
+#watson_container .table {
+	display: table;
+	width: 100%;
+}
+#watson_container .table .cell {
+	display: table-cell;
+}
+#watson_container .table .cell.middle {
+	vertical-align: middle;
+}
+#watson_container .table .cell.bottom {
+	vertical-align: bottom;
+}
+#watson_container .table .cell.left {
+	text-align: left;
+	width: 30%;
+}
+#watson_container .table .cell.center {
+	text-align: left;
+	padding: 0px !important;
+	width: 40%;
+}
+#watson_container .table .cell.right {
+	text-align: right;
+	width: 30%;
+}
+
+/* --- */
+
+/* @group IMAGE VIEWER */
+
+/* watson container - image viewer */
+#watson_container .img-viewer {
+	width: 650px;
+	height: auto;
+	position: absolute;
+	top: 0px;
+	z-index: 10;
+	right: 380px;
+	opacity: 0;
+	-webkit-transition: opacity 0.4s, visibility 0.4s;
+	-moz-transition: opacity 0.4s, visibility 0.4s;
+	-ms-transition: opacity 0.4s, visibility 0.4s;
+	transition: opacity 0.4s, visibility 0.4s;
+}
+#watson_container .img-viewer img {
+	width: 100%;
+	height: auto;
+	display: block;
+	-moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* watson container - image viewer - show */
+.viewerEvent #watson_container .img-viewer {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* @end */
+
+/* @group MESSENGER FRAME */
+
+/* watson container - messenger frame */
+#watson_container .messenger-frame {
+	width: 450px;
+	height: 600px;
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+	display: none;
+	-moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	z-index: 2;
+}
+
+/* - */
+
+/* watson container - messenger frame - frame header */
+#watson_container .messenger-frame .frame-header {
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+	-moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+}
+#watson_container .messenger-frame .frame-header > .table {
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	background: #f2f2f2;
+}
+#watson_container .messenger-frame .frame-header > .table > .cell {
+	box-sizing: border-box;
+	padding: 0px 20px;
+}
+#watson_container .messenger-frame .frame-header > .table > .cell.left {
+	width: 10%;
+}
+
+/* watson container - messenger frame - frame header - title */
+#watson_container .messenger-frame .frame-header .title {
+	width: auto;
+	height: 30px;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+	/*padding-left: 35px;*/
+}
+#watson_container .messenger-frame .frame-header .avatar {
+	height: 30px;
+	width: 91px;
+	position: relative;
+	background-image: url(../img/logo.png);
+	background-position: center center;
+	background-size: 100% auto;
+	/* box-shadow: 5px 5px 14px rgba(255, 99, 25, 0.5); */
+	margin-top: 0px;
+	background-repeat: no-repeat;
+}
+#watson_container .messenger-frame .frame-header .title .name {
+	color: #464646;
+	font-size: 14px;
+	line-height: 14px;
+	line-height: 30px;
+	width: 100%;
+	font-weight: 400;
+	text-align: left;
+	white-space: nowrap;
+}
+#watson_container .messenger-frame .frame-header .title .name strong {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+#watson_container .messenger-frame .frame-header .status .online_status {
+	position: absolute;
+	/* text-align: left; */
+	background: #2ECC71;
+	height: 15px;
+	width: 15px;
+	border-radius: 54px;
+	/* margin-top: 10px; */
+
+}
+#watson_container .messenger-frame .frame-header .status .text-status {
+	color: #999999;
+	/*margin-left: 20px;*/
+	font-weight: 400;
+	font-size: 14px;
+
+}
+#watson_container .messenger-frame .frame-header .title .online_status span.online {
+	display: none;
+}
+#watson_container .messenger-frame .frame-header .title .online_status span.offline {
+	display: none;
+}
+#watson_container .messenger-frame .frame-header .title .online_status.on:before {
+	width: 6px;
+	height: 6px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #99bd2a;
+	content: '';
+	margin-right: 5px;
+	display: inline-block;
+}
+#watson_container .messenger-frame .frame-header .title .online_status.on span.online {
+	display: inline-block;
+}
+#watson_container .messenger-frame .frame-header .title .online_status.on span.offline {
+	display: none;
+}
+#watson_container .messenger-frame .frame-header .title .online_status.off:before {
+	width: 6px;
+	height: 6px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: red;
+	content: '';
+	margin-right: 5px;
+	display: inline-block;
+}
+#watson_container .messenger-frame .frame-header .title .online_status.off span.online {
+	display: none;
+}
+#watson_container .messenger-frame .frame-header .title .online_status.off span.offline {
+	display: inline-block;
+}
+
+#watson_container .messenger-frame .frame-header .status {
+	margin-top: -5px;
+}
+
+/* watson container - messenger frame - frame header - close */
+#watson_container .messenger-frame .frame-header .close {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+}
+#watson_container .messenger-frame .frame-header .close a {
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+	font-size: 30px;
+	font-weight: 600;
+	color: #ED1C24;
+}
+#watson_container .messenger-frame .frame-header .close a:hover {
+	background-position: right bottom;
+}
+
+/* watson container - messenger frame - frame header - minimize */
+#watson_container .messenger-frame .frame-header .minimize {
+	display: inline-block;
+	vertical-align: top;
+}
+#watson_container .messenger-frame .frame-header .minimize a {
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+	font-size: 30px;
+	font-weight: 600;
+	color: #ED1C24;
+}
+#watson_container .messenger-frame .frame-header .minimize a:hover {
+	background-position: left bottom;
+}
+
+/* - */
+
+/* watson container - messenger frame - messenger body */
+#watson_container .messenger-frame .messenger-body {
+	height: 480px;
+	overflow: hidden;
+	background-color: #ffffff;
+	position: relative;
+	box-sizing: border-box;
+	margin-top: 60px;
+}
+#watson_container .messenger-frame .messenger-body .overflow {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+	box-sizing: border-box;
+	padding: 0px 20px;
+}
+
+/* watson container - messenger frame - messenger body - message */
+#watson_container .messenger-frame .messenger-body .message {
+	width: auto;
+	max-width: 95%;
+	display: inline-block;
+	margin: 15px 15px 15px 15px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	/* overflow: hidden; */
+	color: #464646;
+	position: relative;
+	box-shadow: 0 10px 76px rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	-webkit-animation: fadeIn 0.5s;
+	-moz-animation: fadeIn 0.5s;
+	animation: fadeIn 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-duration: .5s;
+	-moz-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-animation-delay: 0.1s;
+	-moz-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+
+
+#watson_container .messenger-frame .messenger-body .message:first-child {
+	margin-top: 20px;
+}
+#watson_container .messenger-frame .messenger-body .message.received {
+	background-color: #ffffff;
+	text-align: left;
+	font-weight: 400;
+	float: left;
+	/*margin-left: 33px;*/
+}
+
+.message.received:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -17px;
+	right: auto;
+	top: 12px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: white white transparent transparent;
+}
+
+#watson_container .messenger-frame .messenger-body .message.send {
+	background-color: #ffffff;
+	text-align: left;
+	font-weight: 400;
+	float: right;
+	margin-right: 18px;
+}
+
+.message.send:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	/* left: 0; */
+	right: -16px;
+	top: 10px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: white transparent transparent white;
+}
+
+#watson_container .messenger-frame .messenger-body .message.error {
+	background-color: #ffffff;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-weight: 700;
+	width: 100%;
+}
+
+/* watson container - messenger frame - messenger body - message - meta */
+#watson_container .messenger-frame .messenger-body .message .message-meta {
+	width: 100%;
+	margin-bottom: 5px;
+	font-size: 10px;
+	color: #b9b9b9;
+	display: none;
+}
+#watson_container .messenger-frame .messenger-body .message .message-meta:empty {
+	display: none;
+}
+
+/* watson container - messenger frame - messenger body - message - logo */
+#watson_container .messenger-frame .messenger-body .message .logo {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	vertical-align: top;
+	display: none;
+	position: relative;
+	overflow: hidden;
+}
+
+/* watson container - messenger frame - messenger body - message - message block */
+#watson_container .messenger-frame .messenger-body .message .message-block {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block .card {
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #797979;
+	display: none;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block p {
+	color: #464646;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block p b {
+	color: #000;
+	font-weight: 700;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block p:empty {
+	display: none;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block p:last-child {
+	margin-bottom: 0px;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block a {
+	font-weight: 700;
+	cursor: pointer;
+	/*padding: 5px 15px 5px 15px;*/
+	font-size: 16px;
+	text-decoration: underline;
+
+}
+#watson_container .messenger-frame .messenger-body .message .message-block a:hover {
+	color: #000;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block u {
+	color: #000;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block img {
+	height: auto;
+	width: 90%;
+	overflow: hidden;
+	cursor: pointer;
+	border: 1px solid #7f7f7f;
+	margin-top: 10px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-transition: opacity 0.4s, border 0.4s;
+	-moz-transition: opacity 0.4s, border 0.4s;
+	-ms-transition: opacity 0.4s, border 0.4s;
+	transition: opacity 0.4s, border 0.4s;
+	position: relative;
+	z-index: 0;
+	text-align: -webkit-center;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block .zoom {
+	width: 100%;
+	position: relative;
+	height: 0px;
+	display: block;
+	vertical-align: top;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	pointer-events: none;
+}
+
+#watson_container .messenger-frame .messenger-body .message .message-block img:hover {
+	opacity: 0.4;
+	border: 1px solid #e7e7e7;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block ul {
+	width: 100%;
+	margin: 15px 0px 8px 0px;
+	text-align: -webkit-center;
+	box-sizing: border-box;
+	/* padding-right: 20px; */
+	color: #464646;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 700;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block ul ul:last-child {
+	margin-bottom: 0px;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block ul li {
+	width: 95%;
+	display: inline-block;
+	vertical-align: -webkit-baseline-middle;
+	/* background-color: #ED1C24; */
+	font-size: 18px;
+	line-height: 20px;
+	position: relative;
+	font-weight: 400;
+	border: 0px none;
+	opacity: 1;
+	text-align: -webkit-left;
+	color: #ed1c24;
+}
+#watson_container .messenger-frame .messenger-body .message .message-block ul li:after {/*
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	border-color: transparent transparent transparent #ff6319;
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 0px;*/
+}
+
+/* watson container - messenger frame - messenger body - message - time */
+#watson_container .messenger-frame .messenger-body .message .time {
+	width: 100%;
+	/* margin-top: 5px; */
+	font-size: 14px;
+	font-weight: 500;
+	color: #828282;
+}
+#watson_container .messenger-frame .messenger-body .message.received .time {
+	text-align: right;
+}
+#watson_container .messenger-frame .messenger-body .message.send .time {
+	text-align: right;
+}
+
+/* watson container - messenger frame - messenger body - loading */
+#watson_container .messenger-frame .messenger-body .loading:first-child {
+	margin-top: 20px;
+}
+
+/* watson container - messenger frame - messenger body - suggestion topics */
+#watson_container .messenger-frame .messenger-body .suggestion-topics {
+	background-color: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	/*border: 1px solid #c8c6c6;*/
+	margin-bottom: 15px;
+	overflow: hidden;
+	mation-delay: 0.1s;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	position: relative;
+	margin-top: 15px;
+
+	opacity: 0;
+
+	-webkit-animation: fadeIn 0.5s;
+	-moz-animation: fadeIn 0.5s;
+	animation: fadeIn 0.5s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration: .5s;
+	-moz-animation-duration: .5s;
+	animation-duration: .5s;
+
+	-webkit-animation-delay: 0.1s;
+	-moz-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+
+	margin-left: 16px;
+	margin-right: 16px;
+
+}
+#watson_container .messenger-frame .messenger-body .suggestion-topics .header {
+	width: 100%;
+	border-bottom: 1px solid #ED1C24;
+	padding: 5px 38px;
+	background-color: #ED1C24;
+	box-sizing: border-box;
+	opacity: 0.7;
+}
+#watson_container .messenger-frame .messenger-body .suggestion-topics .header h2 {
+	color: #ffffff;
+	font-size: 18px!important;
+	font-weight: 500;
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+#watson_container .messenger-frame .messenger-body .suggestion-topics .header h2:after {
+	width: 23px;
+	height: 30px;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	margin-top: -15px;
+	background-image: url(../img/light.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	content: '';
+}
+#watson_container .messenger-frame .messenger-body .suggestion-topics > ul {
+	width: 100%;
+	margin-bottom: 0px;
+}
+#watson_container .messenger-frame .messenger-body .suggestion-topics > ul li {
+	width: 100%;
+	border-top: 1px solid #c8c6c6;
+	border-bottom: 0px none;
+	font-size: 14px;
+	line-height: 14px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	background: none;
+	text-decoration: none;
+}
+#watson_container .messenger-frame .messenger-body .suggestion-topics > ul li a {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 9px;
+	text-align: center;
+	color: #464646;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+#watson_container .messenger-frame .messenger-body .suggestion-topics > ul li a:hover {
+	color: #ED1C24;
+}
+#watson_container .messenger-frame .messenger-body .suggestion-topics > ul li:first-child {
+	border-top: 0px none;
+}
+
+/* watson container - messenger frame - messenger body - possible questions */
+#watson_container .messenger-frame .messenger-body .possible-questions {
+	margin-bottom: 15px;
+	position: relative;
+
+	opacity: 0;
+
+	-webkit-animation: fadeIn 0.5s;
+	-moz-animation: fadeIn 0.5s;
+	animation: fadeIn 0.5s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration: .5s;
+	-moz-animation-duration: .5s;
+	animation-duration: .5s;
+
+	-webkit-animation-delay: 0.1s;
+	-moz-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+
+}
+#watson_container .messenger-frame .messenger-body .possible-questions p {
+	color: #464646;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+#watson_container .messenger-frame .messenger-body .possible-questions > p {
+	display: block;
+	padding: 0px 15px;
+	box-sizing: border-box;
+}
+#watson_container .messenger-frame .messenger-body .possible-questions a {
+	color: #000000;
+	font-weight: 700;
+	cursor: pointer;
+}
+#watson_container .messenger-frame .messenger-body .possible-questions a:hover {
+	color: #ED1C24;
+	text-decoration: underline;
+}
+#watson_container .messenger-frame .messenger-body .possible-questions .message {
+	display:none;
+}
+#watson_container .messenger-frame .messenger-body .possible-questions .hidden-possible-questions {
+	display: none;
+}
+#watson_container .messenger-frame .messenger-body .possible-questions.show > p {
+	display:none;
+}
+#watson_container .messenger-frame .messenger-body .possible-questions.show .message {
+	display:block;
+}
+
+/* - */
+
+/* watson container - messenger frame - frame footer */
+#watson_container .messenger-frame .frame-footer {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	-moz-box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.02);
+	box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* watson container - messenger frame - frame footer - write message */
+#watson_container .messenger-frame .frame-footer .write_message {
+	width: 100%;
+}
+#watson_container .messenger-frame .frame-footer .write_message input {
+	color: #464646;
+	display: block;
+	border: none;
+	font-size: 16px;
+	height: 60px;
+	width: 100%;
+	resize: none;
+	-webkit-backface-visibility: hidden;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	background-color: #fff;
+	white-space: nowrap;
+	box-sizing: border-box;
+	padding: 0px 100px 0px 0px;
+	text-indent: 10px;
+	outline: none;
+}
+#watson_container .messenger-frame .frame-footer .write_message input::-webkit-input-placeholder {
+	color: #aeaeae;
+	opacity: 1;
+	font-style: italic;
+}
+#watson_container .messenger-frame .frame-footer .write_message input:-moz-placeholder {
+	color: #aeaeae;
+	opacity: 1;
+	font-style: italic;
+}
+#watson_container .messenger-frame .frame-footer .write_message input::-moz-placeholder {
+	color: #aeaeae;
+	opacity: 1;
+	font-style: italic;
+}
+#watson_container .messenger-frame .frame-footer .write_message input:-ms-input-placeholder {
+	color: #aeaeae;
+	opacity: 1;
+	font-style: italic;
+}
+#watson_container .messenger-frame .frame-footer .write_message input::-ms-clear {
+	display: none;
+}
+
+/* watson container - messenger frame - frame footer - write message */
+#watson_container .messenger-frame .frame-footer .send_message {
+	position: absolute;
+	height: 30px;
+	top: 20%;
+	right: 10px;
+	margin-top: 0px;
+}
+#watson_container .messenger-frame .frame-footer .send_message a {
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	color: #ED1C24;
+	font-size: 16px;
+	font-weight: 700;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 50px;
+	text-decoration: none;
+	border: 1px solid #ED1C24;
+
+}
+#watson_container .messenger-frame .frame-footer .send_message a:hover {
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 700;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 50px;
+	text-decoration: none;
+	border: 1px solid #ED1C24;
+	background-color: #ED1C24;
+}
+button.mic {
+	background-color: transparent;
+	border: 1px solid #ED1C24;
+	border-radius: 50%;
+	position: absolute;
+	top: 20%;
+	right: 55px;
+	cursor: pointer;
+}
+
+
+button.mic:active {
+	 background-color: #ED1C24;
+	 color: transparent;
+ }
+button.mic:hover {
+	background-color: #ED1C24;
+	color: transparent;
+}
+
+button.mic i.fa.fa-microphone {
+	font-size: 20px;
+	color: #ED1C24;
+	padding: 6px 5px 5px 6px;
+}
+
+button.mic i.fa.fa-microphone:hover {
+	color: #ffffff;
+
+}
+
+button.mic i.fa.fa-microphone:active {
+	color: #ffffff;
+
+}
+
+/* - */
+
+/* watson container - messenger frame - opinio body */
+#watson_container .messenger-frame .opinion-body {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.95);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	display: none;
+}
+#watson_container .messenger-frame .opinion-body.active {
+	display: block;
+}
+#watson_container .messenger-frame .opinion-body > .table {
+	width: 100%;
+	height: 100%;
+}
+#watson_container .messenger-frame .opinion-body > .table > .cell {
+	padding: 0px 20px;
+	box-sizing: border-box;
+}
+
+/* watson container - messenger frame - opinio body */
+#watson_container .messenger-frame .opinion-body .close {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+#watson_container .messenger-frame .opinion-body .close a {
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+	color: #ED1C24;
+	font-size: 32px;
+	font-weight: 900;
+}
+#watson_container .messenger-frame .opinion-body .close a:hover {
+	background-position: right bottom;
+}
+
+/* watson container - messenger frame - opinio body - minimize */
+#watson_container .messenger-frame .opinion-body .minimize {
+	position: absolute;
+	top: 15px;
+	right: 46px;
+}
+#watson_container .messenger-frame .opinion-body .minimize a {
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+	color: #ED1C24;
+	font-size: 32px;
+	font-weight: 900;
+}
+#watson_container .messenger-frame .opinion-body .minimize a:hover {
+	background-position: left bottom;
+}
+
+/* watson container - messenger frame - opinio body - text */
+#watson_container .messenger-frame .opinion-body .text {
+	width: 100%;
+	text-align: -webkit-center;
+}
+#watson_container .messenger-frame .opinion-body .text p {
+	width: 80%;
+	color: #464646;
+	font-size: 22px;
+	line-height: 35px;
+	margin-bottom: 45px;
+}
+
+/* watson container - messenger frame - opinio body - stars */
+#watson_container .messenger-frame .opinion-body .stars {
+	width: 100%;
+	margin: 20px 0px 25px 0px;
+	height: 40px;
+}
+#watson_container .messenger-frame .opinion-body .stars ul {
+	width: 100%;
+	text-align: center;
+	font-size: 0px;
+}
+#watson_container .messenger-frame .opinion-body .stars ul li {
+	display: inline-block;
+	vertical-align: top;
+	height: 24px;
+	border:0 none;
+	padding: 0;
+	background: none;
+}
+#watson_container .messenger-frame .opinion-body .stars ul li a {
+	width: 25px;
+	height: 72px;
+	display: inline-block;
+	vertical-align: top;
+	background-image: url(../img/clarin2.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 24px auto;
+	text-indent: -9999px;
+	overflow: hidden;
+	padding: 0px 16px;
+}
+#watson_container .messenger-frame .opinion-body .stars ul li a.active {
+	background-image: url(../img/clarin1.png);
+}
+#watson_container .messenger-frame .opinion-body .stars ul li a:hover {
+	opacity: 0.8;
+}
+
+/* watson container - messenger frame - opinio body - send */
+#watson_container .messenger-frame .opinion-body .send {
+	width: 100%;
+	text-align: center;
+}
+#watson_container .messenger-frame .opinion-body .send a {
+	width: 189px;
+	color: #fff;
+	font-size: 22px;
+	line-height: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 3px;
+	background-color: #cdcdcd;
+	display: inline-block;
+	pointer-events: none;
+	padding: 10px;
+	margin-top: 30px;
+}
+#watson_container .messenger-frame .opinion-body .send a.active {
+	pointer-events: all;
+	background-color: #ED1C24;
+	opacity: 0.85;
+}
+#watson_container .messenger-frame .opinion-body .send a:hover {
+	color: #fff;
+	background-color: #ED1C24;
+}
+
+/* watson container - messenger frame - opinio body - success message */
+#watson_container .messenger-frame .opinion-body .success_message {
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+#watson_container .messenger-frame .opinion-body .success_message h2 {
+	color: #464646;
+	font-size: 20px!important;
+	line-height: 19px!important;
+	margin: 0px;
+	font-weight: 400;
+	background-color: #d2d2d2;
+	height: 100px;
+	position: absolute;
+	right: 0;
+	bottom: 91px;
+	padding: 20px;
+	width: 189px;
+	opacity: 0.8;
+	transform: scaleY(1.4);
+}
+
+#watson_container .messenger-frame .opinion-body .success_message p {
+	color: #464646;
+	font-size: 18px!important;
+	line-height: 18px!important;
+	margin: 0px;
+	font-weight: 100;
+	/* background-color: #d2d2d2; */
+	/* height: 114px; */
+	position: absolute;
+	right: 0;
+	bottom: 83px;
+	padding: 20px;
+	width: 190px;
+	opacity: 0.8;
+	transform: scaleY(1.2);
+}
+
+/* watson container - messenger frame - opinio body - success message */
+#watson_container .messenger-frame .opinion-body.success .stars_container {
+	display: none;
+}
+
+#watson_container .messenger-frame .opinion-body .success_message .avatar{
+	width: 335px;
+	height: 286px;
+	position: relative;
+	/* border-radius: 134px; */
+	background-image: url(../img/chau.jpg);
+	background-position: center center;
+	background-size: 87% auto;
+	/* box-shadow: 31px 25px 30px rgba(208, 209, 211, 1); */
+	margin-bottom: 72px;
+	/* margin: 20px; */
+	/* margin-top: -174px; */
+	background-repeat: no-repeat;
+	position: absolute;
+	left: -22px;
+	bottom: 100px;
+}
+#watson_container .messenger-frame .opinion-body.success .success_message {
+	display: inline-block;
+}
+
+/* - */
+
+/* watson container - messenger frame - opinion body */
+#watson_container .messenger-frame .pop_message_body {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.95);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	display: none;
+}
+#watson_container .messenger-frame .pop_message_body.active {
+	display: block;
+}
+#watson_container .messenger-frame .pop_message_body > .table {
+	width: 100%;
+	height: 100%;
+}
+#watson_container .messenger-frame .pop_message_body > .table > .cell {
+	padding: 0px 20px;
+	box-sizing: border-box;
+}
+
+/* watson container - messenger frame - opinion body */
+#watson_container .messenger-frame .pop_message_body .message {
+	width: 100%;
+}
+
+#watson_container .messenger-frame .pop_message_body .message .avatar {
+	width: 311px;
+	height: 200px;
+	position: relative;
+	background-image: url(../img/duda.gif);
+	background-position: center top;
+	background-size: 178% auto;
+	box-shadow: 10px 10px 10px rgba(208, 209, 211, 0.5);
+	top: 0px;
+	margin-bottom: 31px;
+
+}
+#watson_container .messenger-frame .pop_message_body .message p {
+	width: 100%;
+	color: #464646;
+	font-size: 22px;
+	line-height: 40px;
+	font-family: 'Roboto',Helvetica,Arial,sans-serif !important;
+	margin-bottom: 20px;
+	font-weight: 500;
+}
+#watson_container .messenger-frame .pop_message_body .message ul {
+	width: 100%;
+	margin-top: 20px;
+	font-size: 0px;
+}
+#watson_container .messenger-frame .pop_message_body .message ul li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px 5px;
+	background: none;
+	border: 0 none;
+	padding: 0;
+}
+
+#watson_container .messenger-frame .pop_message_body .message ul li a {
+	width: 90px;
+	height: 38px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 36px;
+	padding: 0px 30px;
+	display: inline-block;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	background-color: #ED1C24;
+	opacity: 0.85;
+	text-decoration: none;
+	font-weight: 500;
+}
+#watson_container .messenger-frame .pop_message_body .message ul li a:hover {
+	color: #fff;
+	background-color: #ED1C24;
+}
+
+/* --- */
+
+/* watson container - messenger frame - open */
+.display-chat #watson_container .messenger-frame {
+	display: block;
+}
+
+/* @end */
+
+/* @group LAUNCHER */
+
+/* watson container - launcher */
+#watson_container .launcher {
+	position: absolute;
+	bottom: 100px;
+	right: 0px;
+	height:80px;
+	width: 80px;
+	box-sizing: border-box;
+	padding: 5px;
+	text-align: center;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.56);
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translate3d(0,100px,0);
+	-moz-transform: translate3d(0,100px,0);
+	-ms-transform: translate3d(0,100px,0);
+	transform: translate3d(0,100px,0);
+	z-index: 0;
+	-ms-border-radius: 50px 50px 50px 5px;
+	-webkit-border-radius: 50px 50px 50px 5px;
+	-moz-border-radius: 50px 50px 50px 5px;
+	border-radius: 50px 50px 50px 5px;
+	-moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+/* watson container - launcher - icon */
+#watson_container .launcher .icon {
+	width: 65px;
+	height: 65px;
+	top: 7px;
+	right: 7px;
+	position: absolute;
+	-ms-border-radius: 50px 50px 50px 50px;
+	-webkit-border-radius: 50px 50px 50px 50px;
+	-moz-border-radius: 50px 50px 50px 50px;
+	border-radius: 50px 50px 50px 50px;
+	display: inline-block;
+	background-color: #ED1C24;
+	background-image: url(../img/textsms.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 40px auto;
+	overflow: hidden;
+	-webkit-transition: background-color 0.4s;
+	-moz-transition: background-color 0.4s;
+	-ms-transition: background-color 0.4s;
+	transition: background-color 0.4s;
+	opacity: 0.85;
+}
+#watson_container .launcher:hover .icon,
+#watson_container .launcher.inital-view .icon {
+	background-color: #7F7F7F;
+}
+
+/* watson container - launcher - text */
+#watson_container .launcher .text {
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	margin-top: -15px;
+	bottom: -45px;
+	right: 0;
+	background: #dedede;
+	border-radius: 7px;
+	color: #464646;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 30px;
+	text-align: right;
+	box-sizing: border-box;
+	padding: 20px 20px 20px 20px;
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-bottom-left-radius: 30px;
+	-moz-border-radius-topleft: 30px;
+	-moz-border-radius-bottomleft: 30px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	-webkit-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+	-moz-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+	-ms-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+	transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+#watson_container .launcher:hover .text,
+#watson_container .launcher.inital-view .text {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* - */
+
+/* watson container - launcher - text */
+#watson_container .launcher .avatar {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	top: 5px;
+	left: 6px;
+	border-radius: 50%;
+	background-position: center top;
+	background-size: 270% auto;
+	right: 8px;
+	box-sizing: border-box;
+	-webkit-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+	-moz-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+	-ms-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+	transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+#watson_container .launcher:hover .avatar,
+#watson_container .launcher.inital-view .avatar {
+	/*width: 180px;*/
+	opacity: 1;
+	visibility: visible;
+}
+
+/* - */
+
+
+/* watson container - launcher - display chat */
+.display-chat #watson_container .launcher {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translate3d(0,100px,0);
+	-moz-transform: translate3d(0,100px,0);
+	-ms-transform: translate3d(0,100px,0);
+	transform: translate3d(0,100px,0);
+}
+
+/* watson container - launcher - active */
+#watson_container .launcher.active {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/* @end */
+
+/* @group LOADING */
+
+/* watson container - loading */
+#watson_container .loading {
+	width: 80px;
+	margin: 0px 0px 10px 0px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: #ffffff;
+	-webkit-border-radius: 20px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius: 20px;
+	-moz-border-radius-topleft: 5px;
+	border-radius: 20px;
+	border-top-left-radius: 5px;
+	text-align: center;
+	float: left;
+
+	opacity:0;
+
+	-webkit-animation: fadeIn 0.5s;
+	-moz-animation: fadeIn 0.5s;
+	animation: fadeIn 0.5s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration: .5s;
+	-moz-animation-duration: .5s;
+	animation-duration: .5s;
+
+	-webkit-animation-delay: 0.1s;
+	-moz-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+
+}
+#watson_container .loading .dot {
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	margin: 0 2px;
+	background-color: #ED1C24;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+
+	opacity: 1;
+
+	-webkit-animation: fadedot infinite;
+	-moz-animation: fadedot infinite;
+	animation: fadedot infinite;
+	position: relative;
+
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+
+}
+#watson_container .loading .dot1 {
+	-webkit-animation-delay: 1.5s;
+	-moz-animation-delay: 1.5s;
+	animation-delay: 1.5s;
+}
+#watson_container .loading .dot2 {
+	-webkit-animation-delay:1.7s;
+	-moz-animation-delay:1.7s;
+	animation-delay: 1.7s;
+	opacity: 0.8;
+}
+#watson_container .loading .dot3 {
+	-webkit-animation-delay: 1.9s;
+	-moz-animation-delay: 1.9s;
+	animation-delay: 1.9s;
+	opacity: 0.6;
+}
+
+
+/* @end */
+
+/* --- */
+
+/* @group EXPLORER */
+
+/* watson container - messenger frame - messenger body - message */
+#watson_container.isIE .messenger-frame .messenger-body .message {
+	opacity: 1!important;
+	bottom: 0px!important;
+	-webkit-animation: none!important;
+	-moz-animation: none!important;
+	animation: none!important;
+}
+
+/* watson container - messenger frame - messenger body - suggestion topics */
+#watson_container.isIE .messenger-frame .messenger-body .suggestion-topics {
+	opacity: 1!important;
+	bottom: 0px!important;
+	-webkit-animation: none!important;
+	-moz-animation: none!important;
+	animation: none!important;
+}
+
+/* watson container - messenger frame - messenger body - possible questions */
+#watson_container.isIE .messenger-frame .messenger-body .possible-questions {
+	opacity: 1!important;
+	bottom: 0px!important;
+	-webkit-animation: none!important;
+	-moz-animation: none!important;
+	animation: none!important;
+}
+
+/* watson container - loading */
+#watson_container.isIE .loading {
+	opacity: 1!important;
+	bottom: 0px!important;
+	-webkit-animation: none!important;
+	-moz-animation: none!important;
+	animation: none!important;
+}
+
+/* @end */
+
+/* @group KEYFRAMES */
+
+@-webkit-keyframes fadeIn {
+	from { opacity:0; bottom: -20px; }
+	to { opacity:1; bottom: 0px; }
+}
+@-moz-keyframes fadeIn {
+	from { opacity:0; bottom: -20px; }
+	to { opacity:1; bottom: 0px; }
+}
+@keyframes fadeIn {
+	from { opacity:0; bottom: -20px; }
+	to { opacity:1; bottom: 0px; }
+}
+
+@-webkit-keyframes fadedot {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+@-moz-keyframes fadedot {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+@keyframes fadedot {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+
+/* @end */
+
+/* @group MEDIAQUERIES */
+
+@media only screen
+and (min-width : 0px)
+and (max-width : 767px) {
+
+	/* @group IMAGE VIEWER */
+
+	/* watson container - image viewer */
+	#watson_container .img-viewer {
+		display: none!important;
+	}
+
+	/* @end */
+
+	/* @group MESSENGER FRAME */
+
+	/* watson container - messenger frame */
+	#watson_container .messenger-frame {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		-moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		margin-bottom: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		z-index: 100;
+	}
+
+	#watson_container .messenger-frame .frame-footer .write_message input {
+		color: #464646;
+		display: block;
+		border: none;
+		font-size: 20px;
+		height: 75px;
+		width: 100%;
+		resize: none;
+		-webkit-backface-visibility: hidden;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		background-color: #fff;
+		white-space: nowrap;
+		box-sizing: border-box;
+		padding: 0px 100px 0px 0px;
+		text-indent: 20px;
+		outline: none;
+	}
+
+	#watson_container .messenger-frame .frame-footer .send_message a {
+		display: inline-block;
+		vertical-align: top;
+		line-height: 45px;
+		height: 45px;
+		padding: 0px 12px;
+		text-align: center;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 700;
+		background-color: #ED1C24;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		border-radius: 2px;
+		text-decoration: none;
+		opacity: 0.85;
+	}
+
+	#watson_container .messenger-frame .messenger-body .message .message-block p {
+		color: #464646;
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 400;
+		margin-bottom: 0px;
+	}
+
+	#watson_container .messenger-frame .messenger-body .message .time {
+		width: 100%;
+		margin-top: 5px;
+		font-size: 14px;
+		font-weight: 500;
+		color: #828282;
+	}
+
+	#watson_container .messenger-frame .frame-header .status .text-status {
+		color: #999999;
+		/* margin-left: 20px; */
+		font-weight: 400;
+		font-size: 12px;
+	}
+
+	#watson_container .messenger-frame .frame-header .status .online_status {
+/*		position: absolute;
+		!* text-align: left; *!
+		background: #2ECC71;
+		height: 15px;
+		width: 15px;
+		border-radius: 54px;
+		!* margin-top: 10px; *!
+		bottom: 28px;*/
+	}
+
+	#watson_container .messenger-frame .messenger-body .message .message-block a {
+		font-weight: 700;
+		cursor: pointer;
+		/*padding: 5px 15px 5px 15px;*/
+		font-size: 20px;
+	}
+
+	#watson_container .messenger-frame .opinion-body .text p {
+		width: 80%;
+		color: #464646;
+		font-size: 22px;
+		line-height: 35px;
+		margin-bottom: 45px;
+	}
+	/* - */
+
+	/* watson container - messenger frame - frame header */
+	#watson_container .messenger-frame .frame-header {
+		position: absolute;
+		z-index: 2;
+		top: 0px;
+		left: 0px;
+	}
+	#watson_container .messenger-frame .frame-header > .table {
+		height: 76px;
+	}
+	#watson_container .messenger-frame .frame-header > .table > .cell.left {
+		width: 1%;
+	}
+
+	/* watson container - messenger frame - frame header - title */
+	#watson_container .messenger-frame .frame-header .title .name {
+		font-size: 23px;
+	}
+
+	/* - */
+
+	/* watson container - messenger frame - messenger body */
+	#watson_container .messenger-frame .messenger-body {
+		height: 100%!important;
+		/*padding-top: 50px;*/
+		padding-bottom: 50px;
+		overflow: hidden;
+		position: relative;
+		box-sizing: border-box;
+		z-index: 0;
+	}
+
+	/* watson container - messenger frame - messenger body - message */
+	#watson_container .messenger-frame .messenger-body .message {
+		-webkit-backface-visibility: hidden;
+	}
+
+	/* watson container - messenger frame - messenger body - zoom */
+	#watson_container .messenger-frame .messenger-body .message .message-block .zoom {
+		display: none!important;
+	}
+
+	/* - */
+
+	/* watson container - messenger frame - frame footer */
+	#watson_container .messenger-frame .frame-footer {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		z-index: 2;
+		-webkit-border-bottom-right-radius: 0px;
+		-webkit-border-bottom-left-radius: 0px;
+		-moz-border-radius-bottomright: 0px;
+		-moz-border-radius-bottomleft: 0px;
+		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+
+	/* @end */
+
+	/* @group LAUNCHER */
+
+	/* watson container - launcher */
+	#watson_container .launcher {
+		position: absolute;
+		bottom: 100px;
+		right: 0px;
+		height: 80px;
+		width: 80px;
+		box-sizing: border-box;
+		padding: 5px;
+		text-align: center;
+		background: #fff;
+		background: rgba(255, 255, 255, 0.56);
+		cursor: pointer;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transform: translate3d(0,100px,0);
+		-moz-transform: translate3d(0,100px,0);
+		-ms-transform: translate3d(0,100px,0);
+		transform: translate3d(0,100px,0);
+		z-index: 0;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		-moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+		-webkit-transition: all 0.4s;
+		-moz-transition: all 0.4s;
+		-ms-transition: all 0.4s;
+		transition: all 0.4s;
+	}
+
+	/* watson container - launcher - icon */
+	#watson_container .launcher .icon {
+		width: 65px;
+		height: 65px;
+		top: 7px;
+		right: 7px;
+		position: absolute;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		display: inline-block;
+		background-color: #ED1C24;
+		background-image: url(../img/textsms.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 40px auto;
+		overflow: hidden;
+		-webkit-transition: background-color 0.4s;
+		-moz-transition: background-color 0.4s;
+		-ms-transition: background-color 0.4s;
+		transition: background-color 0.4s;
+		opacity: 0.85;
+	}
+	#watson_container .launcher:hover .icon,
+	#watson_container .launcher.inital-view .icon {
+		background-color: #ED1C24;
+	}
+
+	/* watson container - launcher - text */
+	#watson_container .launcher .text {
+		width: 300px;
+		height: 30px;
+		position: absolute;
+		margin-top: -15px;
+		bottom: -45px;
+		right: 0;
+		background: #dedede;
+		border-radius: 7px;
+		color: #464646;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 30px;
+		text-align: right;
+		box-sizing: border-box;
+		padding: 20px 20px 20px 20px;
+		-webkit-border-top-left-radius: 30px;
+		-webkit-border-bottom-left-radius: 30px;
+		-moz-border-radius-topleft: 30px;
+		-moz-border-radius-bottomleft: 30px;
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+		-webkit-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+		-moz-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+		-ms-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+		transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+		white-space: nowrap;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+	}
+	#watson_container .launcher:hover .text,
+	#watson_container .launcher.inital-view .text {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* - */
+
+	/* watson container - launcher - text */
+	#watson_container .launcher .avatar {
+		width: 90px;
+		height: 90px;
+		position: absolute;
+		top: 5px;
+		left: 6px;
+		border-radius: 50%;
+		background-position: center top;
+		background-size: 270% auto;
+		right: 8px;
+		box-sizing: border-box;
+		-webkit-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+		-moz-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+		-ms-transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+		transition: width 0.4s, opacity 0.4s, visibility 0.4s, background-color 0.4s;
+		white-space: nowrap;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+	}
+	#watson_container .launcher:hover .avatar,
+	#watson_container .launcher.inital-view .avatar {
+		/*width: 180px;*/
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* - */
+
+
+	/* watson container - launcher - display chat */
+	.display-chat #watson_container .launcher {
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transform: translate3d(0,100px,0);
+		-moz-transform: translate3d(0,100px,0);
+		-ms-transform: translate3d(0,100px,0);
+		transform: translate3d(0,100px,0);
+	}
+
+	/* watson container - launcher - active */
+	#watson_container .launcher.active {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translate3d(0,0,0);
+		-moz-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+
+
+	#watson_container .messenger-frame .opinion-body  .success_message .avatar {
+		width: 400px;
+		height: 400px;
+		position: relative;
+		background-image: url(../img/logo.png);
+		background-position: center top;
+		background-size: 100% auto;
+		/* box-shadow: 31px 25px 30px rgba(208, 209, 211, 1); */
+		margin-bottom: 30px;
+		margin-left: 23%;
+		margin-top: -21px;
+		top: 0px;
+	}
+
+	.message.send:after {
+		content: ' ';
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 251px;
+		/* right: 12px; */
+		top: 10px;
+		bottom: auto;
+		border: 12px solid;
+		border-color: white transparent transparent white;
+	}
+	/* @end */
+
+}
+
+@media only screen
+and (min-width : 768px)
+and (max-width : 1023px) {
+
+	/* @group IMAGE VIEWER */
+
+	/* watson container - image viewer */
+	#watson_container .img-viewer {
+		width: 390px;
+	}
+
+	/* @end */
+
+}
+
+@media only screen
+and (min-width : 1024px)
+and (max-width : 1279px) {}
+
+
+iframe {
+	height: 500px;
+	width: 360px;
+}
+
+/* @end */
+
+/* @end */

@@ -1,0 +1,47 @@
+{
+  "intents": [
+    {
+      "intent": "Tipos_tarjeta",
+      "confidence": 0.4272627200072046
+    }
+  ],
+  "entities": [],
+  "input": {
+    "text": "conocer sobre tarjetas"
+  },
+  "output": {
+    "log_messages": [],
+    "text": [
+      "<p>Estas son las principales noticias de Política:</p>"
+    ],
+    "nodes_visited": [
+    ]
+  },
+  "context": {
+
+    "options": [
+      "Noticia 1","<p><img src='img/option-1.png'></p>",
+      "Noticia 2","<p><img src='img/option-2.png'></p>",
+      "Noticia 3","<p><img src='img/option-3.png'></p>"
+    ],
+    "has_html": true,
+    "last_text": "",
+    "has_options": true,
+    "text_counter": 0,
+    "possibleIntents": [
+    ],
+    "possibleQuestions": [
+    ],
+    "suggestion_topics": [],
+    "disclaimer_procrear": "",
+    "last_desambiguation": " ",
+    "sugestions_required": true,
+    "ask_answer_was_useful": true,
+    "has_suggestions_topics": false,
+    "j": 10,
+    "siete": true,
+    "not_confident": false,
+    "chitchat": false,
+    "has_suggestion_topics": false
+  }
+}

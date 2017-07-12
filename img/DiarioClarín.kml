@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Diario Clarín (Redacción)</name>
+	<Style id="myplaces_placemark_style">
+		<IconStyle>
+			<Icon>
+				<href>https://earth.google.com/clientassets/pin_myplaces_selected_128px.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+			<gx:displayMode>card</gx:displayMode>
+		</BalloonStyle>
+	</Style>
+	<Placemark>
+		<name>Diario Clarín (Redacción)</name>
+		<gx:mid>/g/11bw3_44kc</gx:mid>
+		<LookAt>
+			<longitude>-58.3741826</longitude>
+			<latitude>-34.62909730000001</latitude>
+			<altitude>10.01822892030597</altitude>
+			<heading>0</heading>
+			<tilt>45</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>850.9102304150323</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#myplaces_placemark_style</styleUrl>
+		<Point>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>-58.3741826,-34.6290973,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

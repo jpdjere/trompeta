@@ -1,0 +1,48 @@
+{
+  "input": {
+    "text": "hola"
+  },
+  "output": {
+    "log_messages": [],
+    "text": [
+      "<p>Hola, buen dia!  En qué  noticias estas interesado hoy?</p>"
+    ],
+    "nodes_visited": [
+      "node_1_1474565951597"
+    ]
+  },
+  "context": {
+    "dialog_turn_counter": 0,
+    "conversation_id": "d4912036-d048-4916-b41d-f0a361893191",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "root"
+        }
+      ],
+      "dialog_turn_counter": 1,
+      "dialog_request_counter": 1,
+      "_node_output_map": {
+        "node_1_1474565951597": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "counter": 0,
+    "options": [],
+    "has_html": false,
+    "last_text": "",
+    "has_options": false,
+    "text_counter": 0,
+    "possibleIntents": [],
+    "possibleQuestions": [],
+    "suggestion_topics": [],
+    "disclaimer_procrear": [],
+    "last_desambiguation": " ",
+    "sugestions_required": true,
+    "ask_answer_was_useful": true,
+    "has_suggestions_topics": false
+  }
+}

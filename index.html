@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+	<head>
+
+		<title>Watson</title>
+
+		<!-- metatags -->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<!-- mobile Specific Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+		<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no">
+
+		<!-- /// -->
+
+		<!-- google fonts -->
+		<!--<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">-->
+
+		<!-- stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+
+		<!--&lt;!&ndash; stylesheet - font awesome &ndash;&gt;-->
+		<!--<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen" />-->
+		<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" />-->
+		<script src="https://use.fontawesome.com/df24f431da.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<!-- /// -->
+
+		<!-- Javascript -->
+		<script type="text/javascript" src="js/functions.js"></script>
+		<script type="text/javascript" src="js/sjcl.js"></script>
+		<script type="text/javascript" src="javascript/jquery.min.js"></script>
+
+
+	</head>
+
+	<body>
+
+
+		<!--watson_container-->
+		<div id="watson_container">
+
+			<!--img_viewer-->
+			<div class="img-viewer" id="img-viewer"></div>
+			<!--/img_viewer-->
+
+			<!--messenger_frame-->
+			<div class="messenger-frame">
+
+				<!--frame_header-->
+				<header class="frame-header">
+					<div class="table">
+
+						<!--avatar-->
+						<div class="cell middle left">
+							<div class="avatar">
+							</div>
+						</div>
+						<!--/avatar-->
+
+						<!--title-->
+						<div class="cell middle center">
+							<div class="title">
+								<div class="name"><strong>Asesor Virtual</strong></div>
+							</div>
+							<div class="status">
+								<!--<div class="online_status"></div>-->
+								<span class="text-status">en línea</span>
+							</div>
+						</div>
+
+
+
+						<!--minimize&close-->
+						<div class="cell middle right" style="vertical-align: top; padding-top: 6px;">
+							<div class="minimize">
+								<a href="#" id="minimizeChat">&minus;</a>
+							</div>
+							<div class="close">
+								<a href="#" id="closeChat">&times;</a>
+							</div>
+						</div>
+						<!--/minimize&close-->
+					</div>
+				</header>
+				<!--/frame_header-->
+
+				<!-- /// -->
+
+				<!--messenger_body-->
+				<section class="messenger-body">
+					<div class="overflow" id="chatWindow"></div>
+				</section>
+				<!--/messenger_body-->
+
+				<!--opinion_body-->
+				<section class="opinion-body" id="satisfaction">
+					<div class="table">
+						<div class="cell middle center">
+
+							<!--close-->
+							<div class="close">
+								<a href="#" id="closeSatisfaction">&times;</a>
+							</div>
+							<!--/close-->
+
+							<!--minimize-->
+							<div class="minimize">
+								<a href="#" id="minimizeSatisfaction">&minus;</a>
+							</div>
+							<!--/minimize-->
+
+							<!--stars_container-->
+							<div class="stars_container">
+
+
+
+								<!--text-->
+								<div class="text">
+									<p>Antes de irte, calificá esta conversación.<br /> Tu opinión nos ayuda a crecer.</p>
+								</div>
+								<!--/text-->
+
+								<!--stars-->
+								<div class="stars" id="stars">
+									<ul>
+										<li><a href="#" data-star="1">1</a></li>
+										<li><a href="#" data-star="2">2</a></li>
+										<li><a href="#" data-star="3">3</a></li>
+										<li><a href="#" data-star="4">4</a></li>
+										<li><a href="#" data-star="5">5</a></li>
+									</ul>
+								</div>
+								<!--/stars-->
+
+								<!--send-->
+								<div class="send">
+									<a href="#" id="sendSatisfaction">CALIFICAR</a>
+								</div>
+								<!--/send-->
+
+							</div>
+							<!--/stars_container-->
+
+							<!-- /// -->
+
+							<!--success_message-->
+							<div class="success_message">
+								<!--avatar-->
+								<div class="avatar">
+								</div>
+								<!--/avatar-->
+
+								<h2>Gracias por confiar en nosotros</h2>
+								<p>Seguimos siempre actualizados para tu mejor información.</p>
+							</div>
+							<!--/success_message-->
+
+						</div>
+					</div>
+				</section>
+				<!--/opinion_body-->
+
+				<!--pop_message_body-->
+				<section class="pop_message_body" id="closePopup">
+					<div class="table">
+						<div class="cell middle center" style="    text-align: -webkit-center;">
+
+							<!--message-->
+							<div class="message">
+
+								<p>¿ Deseas cerrar el chat ?</p>
+
+								<ul>
+									<li><a id="acceptClosePopup" href="#">Aceptar</a></li>
+									<li><a id="cancelClosePopup" href="#">Cancelar</a></li>
+								</ul>
+							</div>
+							<!--/message-->
+
+						</div>
+					</div>
+				</section>
+				<!--/pop_message_body-->
+
+				<!-- /// -->
+
+				<!--frame_footer-->
+				<footer class="frame-footer">
+
+					<!--write_message-->
+					<div class="write_message">
+						<button class ="mic" onclick="startConverting();"><i class="fa fa-microphone"></i></button>
+						<input type="text" name="mensajeAEnviar" id="chatMessage" placeholder="Escribe tu pregunta aquí">
+
+					</div>
+					<!--/write_message-->
+
+					<!--send_message-->
+					<div class="send_message">
+
+						<a href="#" id="send-button"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+					</div>
+					<!--/send_message-->
+
+				</footer>
+				<!--/frame_footer-->
+
+				<!-- /// -->
+
+			</div>
+			<!--/messenger_frame-->
+
+			<!--launcher-->
+			<div class="launcher">
+				<span class="icon"></span>
+				<!--<span class="text">Hola, ¿ Te puedo ayudar ?</span>-->
+				<span class="avatar"></span>
+			</div>
+			<!--/launcher-->
+
+		</div>
+		<!--/watson_container-->
+
+		<script type="text/javascript">
+
+            var r = document.getElementById('chatMessage');
+            var speechRecognizer = "";
+            function startConverting () {
+                if('webkitSpeechRecognition' in window){
+                    speechRecognizer = new webkitSpeechRecognition();
+                    speechRecognizer.continuous = true;
+                    speechRecognizer.interimResults = true;
+                    speechRecognizer.lang = 'es-AR';
+                    speechRecognizer.start();
+
+                    var finalTranscripts = '';
+
+                    speechRecognizer.onresult = function(event){
+                        var interimTranscripts = '';
+                        for(var i = event.resultIndex; i < event.results.length; i++){
+                            var transcript = event.results[i][0].transcript;
+                            transcript.replace("\n", "<br>");
+                            if(event.results[i].isFinal){
+                                finalTranscripts += transcript;
+                            }else{
+                                interimTranscripts += transcript;
+                            }
+                        }
+                        //r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
+						$("input[name=mensajeAEnviar]").val(finalTranscripts + interimTranscripts);
+                    };
+                    speechRecognizer.onerror = function (event) {
+                    };
+                }else{
+                    r.innerHTML = 'Your browser is not supported. If google chrome, please upgrade!';
+                }
+            }
+
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -34.397, lng: 150.644},
+                    zoom: 8
+                });
+            }
+
+
+
+		</script>
+		<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB7EEnDi3kUBSVuqcD1MtlJo2P0Jwd1RTw'
+				async defer></script>
+
+	</body>
+</html>
